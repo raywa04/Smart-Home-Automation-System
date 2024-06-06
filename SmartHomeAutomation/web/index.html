@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Smart Home Control</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <h1>Smart Home Control</h1>
+  <button id="on">Turn ON</button>
+  <button id="off">Turn OFF</button>
+
+  <script>
+    document.getElementById('on').addEventListener('click', () => {
+      fetch('/led/on');
+    });
+
+    document.getElementById('off').addEventListener('click', () => {
+      fetch('/led/off');
+    });
+  </script>
+</body>
+</html>
